@@ -17,7 +17,7 @@ def criar_aluno(nome, idade):
 
 criar_aluno("Luis Eduardo", 17)
 
-def listar_aluno(nome, idade):
+def listar_aluno():
     conexao, cursor = conectar()
     if conexao:
         try:
@@ -37,6 +37,7 @@ def atualizar_aluno(id_aluno, nova_idade):
     conexao, cursor = conectar()
     if conexao:
         try:
+            co
             cursor.execute(
                 "UPDATE alunos SET idade= %s WHERE id = %s",
                 (nova_idade, id_aluno)
